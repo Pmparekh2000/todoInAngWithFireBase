@@ -21,7 +21,7 @@ export class TodoService {
   }
 
   checkOrUncheckTitles($key: string, flag: boolean){
-    this.todoList.update($key, {isChecked: false});
+    this.todoList.update($key, {isChecked: flag});
   }
 
   removeTitle($key: string){

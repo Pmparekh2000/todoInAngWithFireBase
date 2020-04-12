@@ -10,3 +10,13 @@
         <button>Submit</button>
     </div>
 </div>
+
+<div style="margin:5px 0px">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of toDoListArray">
+            <input type="checkbox" (click)="alterCheck(item.$key, item.isChecked)">
+            {{item.title}}
+            <button (click)="onDelete(item.$key)">Delete</button>
+        </li>
+    </ul>
+</div>
