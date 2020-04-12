@@ -24,8 +24,11 @@ export class TodoComponent implements OnInit {
         return a.isChecked-b.isChecked;
       })
     });
+  }
 
-    
+  onAdd(itemTitle){
+    this.todoService.addTitle(itemTitle.value);
+    itemTitle.value = null;
   }
 
 }
